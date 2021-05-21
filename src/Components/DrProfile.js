@@ -369,24 +369,16 @@ export default function DrProfile() {
       <Typography 
        style={{
         position:'absolute',
-        paddingTop:12,
-
-       }}
-       
+        paddingTop:12,}} 
       >
           <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
-         
       </Typography>
       
       <Typography 
       style={{
-       paddingLeft:50,
-       
-
-       }}
+       paddingLeft:50,}}
       >
            <h3>Olivia  
-             
            <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
               </Typography>
 
@@ -398,10 +390,7 @@ export default function DrProfile() {
              
                     name="read-only" value={value} readOnly />
              </h3>  
-            
-
              <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
-      
       </Typography>
 
       <Divider />
@@ -410,6 +399,95 @@ export default function DrProfile() {
 
     </Grid>
 
+
+
+    
+<Grid container spacing={6} justify="center">
+    <Grid item xs={12} md={8}>
+
+    <Divider />
+      <Typography 
+       style={{
+        position:'absolute',
+        paddingTop:12,}} 
+      >
+          <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
+      </Typography>
+      
+      <Typography 
+      style={{
+       paddingLeft:50,}}
+      >
+           <h3>Olivia  
+           <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
+              </Typography>
+
+              <Rating 
+                      style={{
+                        position:'absolute',
+                        paddingLeft:600,  
+                        }}
+             
+                    name="read-only" value={value} readOnly />
+             </h3>  
+             <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
+      </Typography>
+
+      <Divider />
+         
+    </Grid>
+
+    </Grid>
+
+
+
+
+
+
+    
+<Grid container spacing={6} justify="center">
+    <Grid item xs={12} md={8}>
+
+    <Divider />
+      <Typography 
+       style={{
+        position:'absolute',
+        paddingTop:12,}} 
+      >
+          <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
+      </Typography>
+      
+      <Typography 
+      style={{
+       paddingLeft:50,}}
+      >
+           <h3>Olivia  
+           <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
+              </Typography>
+
+              <Rating 
+                      style={{
+                        position:'absolute',
+                        paddingLeft:600,  
+                        }}
+             
+                    name="read-only" value={value} readOnly />
+             </h3>  
+             <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
+      </Typography>
+
+      <Divider />
+
+      
+    <Typography justify="center"> 
+<Button variant="contained" style={{color:'white' ,backgroundColor:'#71C61D'}}>
+  Load more
+</Button> </Typography>
+          <Divider/> 
+         
+    </Grid>
+
+    </Grid>
 
 
 
