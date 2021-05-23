@@ -11,6 +11,11 @@ import Paper from '@material-ui/core/Paper';
 import GroupIcon from '@material-ui/icons/Group';
 
 import { Icon } from '@material-ui/core';
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import RateReviewIcon from '@material-ui/icons/RateReview';
+
+import BarChart from './Chart'
 
 
 
@@ -64,11 +69,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     padding: theme.spacing(3),
     textAlign: 'center',
+    //position: 'absolute',
     color: theme.palette.text.secondary,
     '& > *': {
       margin: theme.spacing(1),
-      width: theme.spacing(25),
-      height: theme.spacing(20),
+      width: theme.spacing(20),
+      height: theme.spacing(18),
     },
   },
 }));
@@ -111,49 +117,75 @@ export default function Dashboard() {
      
      
       <Paper elevation={2} > 
-      <GroupIcon fontSize='large' Style={{ paddingTop:4 }}/>
-        <Typography
-            style={{
-                paddingTop:12,
-                 }}> 
-                      
-             Doctors 
-       </Typography>
-      </Paper>
-
-
-      <Paper elevation={2} > 
-        <Typography
-            style={{
- 
-                 }}>      
-             Patients 
-       </Typography>
+      <GroupIcon    color='primary' 
+      style={{
+        fontSize:70,
+        }}
+      />
+       <h3  style={{
+        color:'#28a745',
+        }}>Doctors 144 </h3> 
       </Paper>
 
       <Paper elevation={2} > 
-        <Typography
-            style={{
-           
-                 }}>      
-           Appointment
-       </Typography>
+      <GroupIcon    color='primary' 
+      style={{
+        fontSize:70,
+        }}
+      />
+       <h3  style={{
+        color:'#28a745',
+        }}>Total Patient  344 </h3> 
       </Paper>
 
-
-      <Paper elevation={2}> 
-        <Typography
-            style={{
- 
-                 }}>      
-             Revenue
-       </Typography>
-      </Paper>
 
       
+
+      <Paper elevation={2} > 
+      <EventNoteIcon   color='primary' 
+      style={{
+        fontSize:70,
+        }}
+      />
+       <h3  style={{
+        color:'#28a745',
+        }}>Today App 55 </h3> 
+      </Paper>
+
+
+      <Paper elevation={2} > 
+      <MonetizationOnIcon  color='primary' 
+      style={{
+        fontSize:70,
+        }}
+      />
+       <h3  style={{
+        color:'#28a745',
+        }}>Last month $5K </h3> 
+      </Paper>
+
+      <Paper elevation={2} > 
+      <RateReviewIcon  color='primary' 
+      style={{
+        fontSize:70,
+        }}
+      />
+       <h3  style={{
+        color:'#28a745',
+        }}>Reviews 190 </h3>
+
+      </Paper>
     </div>
 
+
+    <h3> Revenue by - pie chart </h3> 
+
+    <BarChart/>
+
       </TabPanel>
+
+
+
       <TabPanel value={value} index={1}>
         Item Two
       </TabPanel>
