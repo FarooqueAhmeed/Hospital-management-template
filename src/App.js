@@ -54,8 +54,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
-
-
+import DrDashboard from './Components/DrDashboard'
+import Dashboard from './Components/Admin/Dashboard'
 
 
 const drawerWidth = 240;
@@ -457,6 +457,27 @@ function App() {
        
         </List>
 
+        <List >
+        <Link to="/DrDashboard" >
+            <ListItem button >
+              <ListItemIcon>  <AccountCircle/>  </ListItemIcon>
+              <ListItemText> Dr.Dashboard </ListItemText>
+             </ListItem>
+             </Link>  
+        </List>
+
+        <List >
+        <Link to="/Dashboard" >
+            <ListItem button >
+              <ListItemIcon>  <AccountCircle/>  </ListItemIcon>
+              <ListItemText> Admin Dashboard </ListItemText>
+             </ListItem>
+             </Link>  
+        </List>
+
+
+      
+
 
 
       
@@ -492,34 +513,31 @@ function App() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
       <Switch>
+
+     
+
         <Route path="/DrProfile">
           <DrProfile />
         </Route>
-       
+
+        <Route path="/DrDashboard">
+          <DrDashboard />
+        </Route>
+
+        <Route path="/Dashboard">
+          <Dashboard />
+        </Route>
+
         <Route path="/">
           <Homepage />
         </Route>
+
+   
+       
+       
       </Switch>
     </div>
     </div>

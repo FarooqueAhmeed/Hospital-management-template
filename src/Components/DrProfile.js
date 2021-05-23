@@ -19,6 +19,32 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
+import Calenderlotti from '../Components/CalenderLoti'
+
+import Footer from '../Components/Footer'
+import Reviews from '../Components/Reviews'
+
+
+
+const labels = {
+  0.5: 'Useless',
+  1: 'Useless+',
+  1.5: 'Poor',
+  2: 'Poor+',
+  2.5: 'Ok',
+  3: 'Ok+',
+  3.5: 'Good',
+  4: 'Good+',
+  4.5: 'Excellent',
+  5: 'Excellent+',
+};
+
+
+
+
+
 
 
 
@@ -69,12 +95,21 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 
+  rootRatting: {
+    width: 200,
+    display: 'flex',
+    alignItems: 'center',
+  },
+
   
 }));
 
 export default function DrProfile() {
   const classes = useStyles();
   const [value, setValue] = React.useState(5);
+
+  const [valueRating, setValueRatting] = React.useState(2);
+  const [hover, setHover] = React.useState(-1);
 
   const [expanded, setExpanded] = React.useState(false);
 
@@ -83,7 +118,7 @@ export default function DrProfile() {
   };
 
   return (
-    <>
+    <Grid>
 <CssBaseline />
 
 <Container maxWidth="lg">
@@ -164,16 +199,19 @@ export default function DrProfile() {
               </Typography>
                 
         </div>
+       
+      
+      
         
         <Grid container spacing={6} justify="left" 
         
         style={{
          
           paddingLeft:200,
-        
-        
         }}>
-                        <Grid item>
+
+
+      <Grid item xs={3} lg={4}>
         
             <div className={classes.rootTimming}>
              
@@ -296,16 +334,34 @@ export default function DrProfile() {
         
         
       </div>
-        
+         
             </Grid>
+
+
+
+
+            <Grid item xs={3} lg={4}>
+
+        <Calenderlotti/>
+             </Grid>
+
+
+
             </Grid>
 
 
 
-            <div className={classes.rootMe}>
+ <Reviews/>
+
+
+
+
+
+
+    <div className={classes.rootMe}>
         
         <Typography variant="h3" gutterBottom style={{}}>
-       Reviews
+       Add a Review for ( Dr. Eric Buckles )
               </Typography>
                 
         </div>
@@ -314,184 +370,60 @@ export default function DrProfile() {
     <Grid item xs={12} md={8}>
 
     <Divider />
-      <Typography 
-       style={{
-        position:'absolute',
-        paddingTop:12,
-
-       }}
-       
-      >
-          <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
-         
-      </Typography>
-      
-      <Typography 
-      style={{
-       paddingLeft:50,
-       
-
-       }}
-      >
-           <h3>Olivia  
-             
-           <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
-              </Typography>
-
-              <Rating 
-                      style={{
-                        position:'absolute',
-                        paddingLeft:600,  
-                        }}
-             
-                    name="read-only" value={value} readOnly />
-             </h3>  
-            
-
-             <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
-      
-      </Typography>
-
-      <Divider />
-         
-    </Grid>
-
-    </Grid>
-
-
-
-
-    
-<Grid container spacing={6} justify="center">
-    <Grid item xs={12} md={8}>
-
-    <Divider />
-      <Typography 
-       style={{
-        position:'absolute',
-        paddingTop:12,}} 
-      >
-          <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
-      </Typography>
-      
-      <Typography 
-      style={{
-       paddingLeft:50,}}
-      >
-           <h3>Olivia  
-           <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
-              </Typography>
-
-              <Rating 
-                      style={{
-                        position:'absolute',
-                        paddingLeft:600,  
-                        }}
-             
-                    name="read-only" value={value} readOnly />
-             </h3>  
-             <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
-      </Typography>
-
-      <Divider />
-         
-    </Grid>
-
-    </Grid>
-
-
-
-    
-<Grid container spacing={6} justify="center">
-    <Grid item xs={12} md={8}>
-
-    <Divider />
-      <Typography 
-       style={{
-        position:'absolute',
-        paddingTop:12,}} 
-      >
-          <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
-      </Typography>
-      
-      <Typography 
-      style={{
-       paddingLeft:50,}}
-      >
-           <h3>Olivia  
-           <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
-              </Typography>
-
-              <Rating 
-                      style={{
-                        position:'absolute',
-                        paddingLeft:600,  
-                        }}
-             
-                    name="read-only" value={value} readOnly />
-             </h3>  
-             <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
-      </Typography>
-
-      <Divider />
-         
-    </Grid>
-
-    </Grid>
-
-
-
-
-
-
-    
-<Grid container spacing={6} justify="center">
-    <Grid item xs={12} md={8}>
-
-    <Divider />
-      <Typography 
-       style={{
-        position:'absolute',
-        paddingTop:12,}} 
-      >
-          <Avatar alt="" src="/images/humberto-chavez-FVh_yqLR9eA-unsplash.jpg" />
-      </Typography>
-      
-      <Typography 
-      style={{
-       paddingLeft:50,}}
-      >
-           <h3>Olivia  
-           <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
-              </Typography>
-
-              <Rating 
-                      style={{
-                        position:'absolute',
-                        paddingLeft:600,  
-                        }}
-             
-                    name="read-only" value={value} readOnly />
-             </h3>  
-             <Typography > <h5> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5> </Typography>
-      </Typography>
-
+    <div className={classes.rootRatting} 
+  
+     
+    >
+    <Rating
+      style={{justify:'center'}}
+        name="hover-feedback"
+        valueRating={valueRating}
+        precision={0.5}
+        onChange={(event, newValue) => {
+          setValueRatting(newValue);
+        }}
+        onChangeActive={(event, newHover) => {
+          setHover(newHover);
+        }}
+      />
+      {valueRating !== null && <Box ml={2}>{labels[hover !== -1 ? hover : valueRating]}</Box>}
+     </div>
       <Divider />
 
+   <TextField
+          id="standard-full-width"
+          label="Review"
+          style={{ margin: 8 }}
+          placeholder="Write your review "
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
       
+
+     
+
+         
     <Typography justify="center"> 
+
+   
+
 <Button variant="contained" style={{color:'white' ,backgroundColor:'#71C61D'}}>
-  Load more
+ Add
 </Button> </Typography>
-          <Divider/> 
+      
          
     </Grid>
 
     </Grid>
 
 
+    <Footer/>   
+  </Grid> 
 
 
-   </> 
-  );
+
+);
 }
