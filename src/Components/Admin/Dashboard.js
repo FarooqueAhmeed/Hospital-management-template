@@ -9,7 +9,7 @@ import Box from '@material-ui/core/Box';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import Paper from '@material-ui/core/Paper';
 import GroupIcon from '@material-ui/icons/Group';
-
+import Button from '@material-ui/core/Button';
 import { Divider, Icon } from '@material-ui/core';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
@@ -200,9 +200,19 @@ export default function Dashboard() {
 
 
       <TabPanel value={value} index={1}>
-      
-    <h3> Staff </h3> 
-   
+      <div style={{
+     paddingBottom:21,
+  }}>
+
+
+<Button variant="contained" 
+style={{
+  color:'white' ,
+  backgroundColor:'#71C61D',
+  }}>
+  Add Staff
+</Button>
+</div>
     <Staff/>
         
       </TabPanel>

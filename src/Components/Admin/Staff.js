@@ -11,6 +11,12 @@ import Doctors from './Doctors'
 import Nurses from './Nurses'
 import Laboratory from './Laboratory'
 import Pharmacy from './Pharmacy'
+import Recipients from './Recipients'
+
+import Accountants from './Accountants'
+import Security from './Security'
+import Swipers from './Swipers'
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -109,19 +115,19 @@ export default function Staff() {
         </TabPanel>
 
         <TabPanel value={value} index={4} dir={theme.direction}>
-          Item 
+          <Recipients/>
         </TabPanel>
 
         <TabPanel value={value} index={5} dir={theme.direction}>
-          Item 
+        <Accountants/>
         </TabPanel>
 
         <TabPanel value={value} index={6} dir={theme.direction}>
-          Item 
+          <Security/>
         </TabPanel>
 
         <TabPanel value={value} index={7} dir={theme.direction}>
-          Item 
+         <Swipers/>
         </TabPanel>
 
 

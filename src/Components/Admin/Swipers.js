@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Pharmacy() {
+export default function Swipers() {
   const classes = useStyles();
 
   return (

@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Pharmacy() {
+export default function Security() {
   const classes = useStyles();
 
   return (
