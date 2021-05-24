@@ -1,18 +1,32 @@
 import React from 'react'
-import { Pie, defaults } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
 
+const MONTHS = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
 
-
-const BarChart = () => {
+const LineChart = () => {
   return (
     <div>
-      <Pie
+      <Line
         data={{
-          labels: ['Appointments', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: [
+            labels: MONTHS,
+            datasets: [
             {
-              label: '# of votes',
-              data: [12, 19, 3, 5, 2, 3],
+              label: 'Apointments',
+              data: [65, 59, 80, 81, 56, 55, 40,60,50],
+            
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -30,6 +44,9 @@ const BarChart = () => {
                 'rgba(255, 159, 64, 1)',
               ],
               borderWidth: 1,
+
+
+              
             },
             // {
             //   label: 'Quantity',
@@ -38,6 +55,8 @@ const BarChart = () => {
             //   borderColor: 'red',
             // },
           ],
+
+          
         }}
         height={400}
         width={600}
@@ -51,6 +70,7 @@ const BarChart = () => {
                   beginAtZero: true,
                   
                   
+                  
                 },
               },
             ],
@@ -59,11 +79,17 @@ const BarChart = () => {
             labels: {
               fontSize: 25,
             },
+           
+            
           },
+
+         
+      
+          
         }}
       />
     </div>
   )
 }
 
-export default BarChart
+export default LineChart

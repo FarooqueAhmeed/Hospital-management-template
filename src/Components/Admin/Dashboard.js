@@ -10,13 +10,17 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import Paper from '@material-ui/core/Paper';
 import GroupIcon from '@material-ui/icons/Group';
 
-import { Icon } from '@material-ui/core';
+import { Divider, Icon } from '@material-ui/core';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 
-import BarChart from './Chart'
+import PieChart from './PieChart'
+import LineChart from './LineChart'
+import BarChart from './BarChart'
+import Footer from '../Footer'
 
+import Staff from '../Admin/Staff'
 
 
 
@@ -77,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(18),
     },
   },
+  
+
 }));
 
 export default function Dashboard() {
@@ -103,7 +109,7 @@ export default function Dashboard() {
         className={classes.tabs}
       >
         <Tab label="Dashboard" {...a11yProps(0)}  />
-        <Tab label="Item Two" {...a11yProps(1)} />
+        <Tab label="Staffs" {...a11yProps(1)} />
         <Tab label="Item Three" {...a11yProps(2)} />
         <Tab label="Item Four" {...a11yProps(3)} />
         <Tab label="Item Five" {...a11yProps(4)} />
@@ -116,7 +122,7 @@ export default function Dashboard() {
       <div className={classes.paperroot}>
      
      
-      <Paper elevation={2} > 
+      <Paper > 
       <GroupIcon    color='primary' 
       style={{
         fontSize:70,
@@ -127,12 +133,11 @@ export default function Dashboard() {
         }}>Doctors 144 </h3> 
       </Paper>
 
-      <Paper elevation={2} > 
+      <Paper  > 
       <GroupIcon    color='primary' 
       style={{
         fontSize:70,
-        }}
-      />
+            }} />
        <h3  style={{
         color:'#28a745',
         }}>Total Patient  344 </h3> 
@@ -141,7 +146,7 @@ export default function Dashboard() {
 
       
 
-      <Paper elevation={2} > 
+      <Paper  > 
       <EventNoteIcon   color='primary' 
       style={{
         fontSize:70,
@@ -153,7 +158,7 @@ export default function Dashboard() {
       </Paper>
 
 
-      <Paper elevation={2} > 
+      <Paper  > 
       <MonetizationOnIcon  color='primary' 
       style={{
         fontSize:70,
@@ -164,7 +169,7 @@ export default function Dashboard() {
         }}>Last month $5K </h3> 
       </Paper>
 
-      <Paper elevation={2} > 
+      <Paper > 
       <RateReviewIcon  color='primary' 
       style={{
         fontSize:70,
@@ -178,16 +183,28 @@ export default function Dashboard() {
     </div>
 
 
-    <h3> Revenue by - pie chart </h3> 
+    <h3> Last month revenue by all departments - Pie Chart </h3> 
 
-    <BarChart/>
+    <PieChart/>
+    <Divider/>
+    <h3> This Year Apointments by all doctors - Line chart </h3> 
 
+    <LineChart/>
+    <Divider/>
+
+    <h3> Top rated doctors - Bar chart </h3> 
+<Divider/>
+     <BarChart/>
       </TabPanel>
 
 
 
       <TabPanel value={value} index={1}>
-        Item Two
+      
+    <h3> Staff </h3> 
+   
+    <Staff/>
+        
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
@@ -211,8 +228,11 @@ export default function Dashboard() {
 
 
 
+    <Footer/>
 
     </div>
+
+
 
   );
 }
