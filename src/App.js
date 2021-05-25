@@ -55,7 +55,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
 import DrDashboard from './Components/DrDashboard'
-import Dashboard from './Components/Admin/Dashboard'
+import AdminDashboard from './Components/Admin/AdminDashboard'
 
 
 const drawerWidth = 240;
@@ -467,7 +467,7 @@ function App() {
         </List>
 
         <List >
-        <Link to="/Dashboard" >
+        <Link to="/AdminDashboard" >
             <ListItem button >
               <ListItemIcon>  <AccountCircle/>  </ListItemIcon>
               <ListItemText> Admin Dashboard </ListItemText>
@@ -527,8 +527,8 @@ function App() {
           <DrDashboard />
         </Route>
 
-        <Route path="/Dashboard">
-          <Dashboard />
+        <Route path="/AdminDashboard">
+          <AdminDashboard />
         </Route>
 
         <Route path="/">
