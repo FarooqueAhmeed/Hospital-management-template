@@ -6,6 +6,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
+import { Container } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,6 +43,7 @@ export default function Suggestions() {
 <> 
 
   
+<Container md={6} xs={6} lg={6}>  
 <div className={classes.root2}>
         
 <Typography variant="h3" gutterBottom style={{}}>
@@ -207,6 +209,7 @@ BOOk YOUR APPOINTMENT NOW
     </Grid>
     </Grid>
 
+    </Container>
 
     </>   
   );

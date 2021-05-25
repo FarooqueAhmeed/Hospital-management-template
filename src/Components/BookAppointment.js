@@ -21,6 +21,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
+import { Container } from '@material-ui/core';
 
 
 
@@ -198,7 +199,7 @@ function BookAppointment() {
   return (
 <div>
 
-  
+  <Container>  
 <div className={classes.root2}>
         
 <Typography variant="h3" gutterBottom style={{}}>
@@ -574,6 +575,8 @@ Clinic
 </Grid>
 
 </form>
+
+</Container>
   </div>
 
 

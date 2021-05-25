@@ -58,6 +58,8 @@ import DrDashboard from './Components/DrDashboard'
 import AdminDashboard from './Components/Admin/AdminDashboard'
 
 
+
+
 const drawerWidth = 240;
 
 
@@ -305,7 +307,7 @@ function App() {
 
 
   return (
-
+<div> 
     <Router>
       
     <div>
@@ -543,7 +545,9 @@ function App() {
     </div>
   </Router>
 
+ 
 
+</div>
  );
 }
 

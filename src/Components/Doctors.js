@@ -48,7 +48,7 @@ function Doctors() {
   return (
 <div>
 
-  
+  <Container> 
 <div className={classes.root}>
         
 <Typography variant="h3" gutterBottom style={{}}>
@@ -65,7 +65,7 @@ function Doctors() {
 
 
 
-
+</Container>
 
 
     </div>

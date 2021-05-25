@@ -31,7 +31,10 @@ function Homepage() {
 
 
     <div className="bg-image">
+   
       <img src="/images/Home-bg.jpg" alt="" />
+
+ 
     </div>
                   
     <div style={{
@@ -55,11 +58,13 @@ function Homepage() {
 
 
 
-      <Doctors/>
-      <BookAppointment/>
+     <Doctors/> 
+      <BookAppointment/> 
       <Suggestions/>
       <About/>
       <Footer/>   
+
+
 
  </div>
  );

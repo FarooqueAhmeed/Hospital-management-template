@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import { Container } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +27,7 @@ export default function About() {
 
   return (
       <>
-
+<Container>  
 <div className={classes.root2}>
         
         <Typography variant="h3" gutterBottom style={{}}>
@@ -65,7 +66,7 @@ export default function About() {
     </Grid>
 
     </Grid>
-
+    </Container>
     </>
   );
 }

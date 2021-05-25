@@ -135,7 +135,7 @@ export default function Reviews() {
 
        }}
       >
-           <h3>Olivia  
+           <h3>Olivia - to - Dr.name
              
            <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
               </Typography>
@@ -179,7 +179,7 @@ export default function Reviews() {
       style={{
        paddingLeft:50,}}
       >
-           <h3>Olivia  
+           <h3>Olivia - to - Dr.name
            <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
               </Typography>
 
@@ -218,7 +218,7 @@ export default function Reviews() {
       style={{
        paddingLeft:50,}}
       >
-           <h3>Olivia  
+           <h3>Olivia - to - Dr.name
            <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
               </Typography>
 
@@ -260,7 +260,7 @@ export default function Reviews() {
       style={{
        paddingLeft:50,}}
       >
-           <h3>Olivia  
+           <h3>Olivia - to - Dr.name
            <Typography className={classes.secondaryHeading}>Reviewed 2 Days ago  
               </Typography>
 
