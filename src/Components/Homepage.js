@@ -7,54 +7,32 @@ import BookAppointment from '../Components/BookAppointment'
 import Footer from '../Components/Footer'
 import Suggestions from '../Components/suggestions'
 import About from '../Components/About'
-
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-
-
-import DrProfile from '../Components/DrProfile';
-
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import AppButton from '../Components/Button'
+import { Container, Divider } from '@material-ui/core';
 
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  
+}));
 
 function Homepage() {
-
+  const classes = useStyles();
   return (
 <div>
 
 
 
     <div className="bg-image">
-   
-      <img src="/images/Home-bg.jpg" alt="" />
-
- 
+      <img src="/images/Home-bg.jpg" alt="" /> 
     </div>
-                  
-    <div style={{
-      position: 'absolute',
-       color: '#71C61D', 
-       top: 250, left: '75%',
-        transform: 'translateX(-50%)'
-      
-       
-        }} > 
-        
-        <Typography variant="h4"  >
-          
-          It is health that is the real wealth,  
-        and not pieces of gold and silver. </Typography>
-        
-  <Button variant="contained" style={{color:'white' ,backgroundColor:'#71C61D'}}>
-  BOOK YOUR APPOINTMENT NOW
-</Button>
-         </div>
+
 
 
 
