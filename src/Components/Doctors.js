@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:'20px',
     textAlign: 'center',
     color: '#71C61D', 
+    margin:40,
   },
 }));
 
@@ -90,7 +91,7 @@ export default function Doctors() {
      
         <Container className={classes.cardGrid} maxWidth="md">
         <div className={classes.root2}>     
-<Typography variant="h3" gutterBottom style={{}}>
+<Typography variant="h4" gutterBottom style={{}}>
 CHOOSE YOUR DOCTOR
       </Typography></div>
          

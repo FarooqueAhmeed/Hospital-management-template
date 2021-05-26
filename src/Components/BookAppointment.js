@@ -23,7 +23,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import { Container } from '@material-ui/core';
 
-
+import AppButton from './Button'
 
 
 
@@ -63,20 +63,10 @@ const useStyles = makeStyles ((theme) => ({
             '&.Mui-focused fieldset': {
               borderColor: 'green',
             },
-        }
-        
-
-
-          
+        }   
         },
-
-        
         margin: theme.spacing(1),
         minWidth: 120,
-
-
-
-        
       },
 
 
@@ -115,9 +105,10 @@ const useStyles = makeStyles ((theme) => ({
     paddingTop:'20px',
     textAlign: 'center',
     color: '#71C61D', 
+    margin:40,
   },
   
- 
+
 
 }));
 
@@ -202,149 +193,18 @@ function BookAppointment() {
   <Container>  
 <div className={classes.root2}>
         
-<Typography variant="h3" gutterBottom style={{}}>
+<Typography variant="h4" gutterBottom style={{}}>
 BOOk YOUR APPOINTMENT NOW
       </Typography>
         
 </div>
 
 
-{/* <Grid
-  container
-  spacing={2}
-  //flexGrow={1}
- // direction="row"
-  // alignItems="center"
-  // justify="center"
-  //style={{ minHeight: '100vh' }}
->
-
-<Grid item xs>
-<form className={classes.root2} noValidate autoComplete="off" >
-
-
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Your Age</InputLabel>
-        <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-          openAge={openAge}
-          onClose={handleCloseAge}
-          onOpen={handleOpenAge}
-          
-          onChange={handleChangeAge}
-        >
-           <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={5}>Five</MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-          <MenuItem value={40}>Fourity</MenuItem>
-          <MenuItem value={50}>Fifty</MenuItem>
-          <MenuItem value={60}>Sixty +</MenuItem>
-
-        </Select>
-      </FormControl>
-
-
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label"> SPECIALIST IN </InputLabel>
-        <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-          openSPECIALIST={openSPECIALIST}
-          onClose={handleCloseSPECIALIST}
-          onOpen={handleOpenSPECIALIST}
-          value={age}
-          onChange={handleChangeSPECIALIST}
-        >
-           <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={5}>Podiatrist</MenuItem>
-          <MenuItem value={10}>General Practitioner</MenuItem>
-          <MenuItem value={20}>Pediatrician</MenuItem>
-          <MenuItem value={30}>Endocrinologist</MenuItem>
-          <MenuItem value={40}>Neurologist</MenuItem>
-          <MenuItem value={50}>Rheumatologist</MenuItem>
-          <MenuItem value={60}>Psychiatrist</MenuItem>
-
-        </Select>
-      </FormControl>
-
-
-
-      
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Dr.</InputLabel>
-        <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-          openDr={openDr}
-          onClose={handleCloseDr}
-          onOpen={handleOpenDr}
-          value={age}
-          onChange={handleChangeDr}
-        >
-           <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-
-          {doctors.map(doctors => {
-        return(
-         <>
-
-          <MenuItem value={5}>{doctors.name}</MenuItem>
-    
-          </>
-          
-          )})}  
-        </Select>
-      </FormControl>
-
-
-
-     
-      <TextField
-        id="datetime-local"
-        label="Next appointment"
-        type="datetime-local"
-        defaultValue="2017-05-24T10:30"
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
-  
-
-
-
-
-
-
-      <TextField  id="outlined-basic" label="Doctor" variant="outlined" />
-      <TextField  id="outlined-basic" label="Doctor" variant="outlined" />
-      <TextField  id="outlined-basic" label="Doctor" variant="outlined" />
-      
-      <TextField  id="outlined-basic" label="Doctor" variant="outlined" />
-      
-
-</form>
-
-</Grid>   
-
-</Grid>
- */}
-
-
 <form className={classes.heroButtons}>
 
 
-
-              <Grid container spacing={6} justify="center">
-                <Grid item>
+              <Grid container justify="center">
+                <Grid item lg={7} xl={7}>
                   
 
                 <FormControl className={classes.formControl}>
@@ -383,7 +243,7 @@ BOOk YOUR APPOINTMENT NOW
           openSPECIALIST={openSPECIALIST}
           onClose={handleCloseSPECIALIST}
           onOpen={handleOpenSPECIALIST}
-          value={age}
+          value={SPECIALIST}
           onChange={handleChangeSPECIALIST}
         >
            <MenuItem value="">
@@ -412,22 +272,22 @@ BOOk YOUR APPOINTMENT NOW
           openDr={openDr}
           onClose={handleCloseDr}
           onOpen={handleOpenDr}
-          value={age}
+          value={Dr}
           onChange={handleChangeDr}
         >
            <MenuItem value="">
             <em>None</em>
           </MenuItem>
 
-          {doctors.map(doctors => {
-        return(
-         <>
+          <MenuItem value={5}>Sofia</MenuItem>
+          <MenuItem value={10}>John</MenuItem>
+          <MenuItem value={20}>Dennis</MenuItem>
+          <MenuItem value={30}>Carry</MenuItem>
+          <MenuItem value={40}>Pratham</MenuItem>
+          <MenuItem value={50}>lessa</MenuItem>
+          <MenuItem value={60}>Imran khan</MenuItem>
 
-          <MenuItem value={5}>{doctors.name}</MenuItem>
-    
-          </>
           
-          )})}  
         </Select>
       </FormControl>
 
@@ -451,8 +311,8 @@ BOOk YOUR APPOINTMENT NOW
     </Grid>
     </Grid>
     
-    <Grid container spacing={6} justify="center">
-      <Grid item>
+    <Grid container spacing={6} justify="center" >
+      <Grid item lg={7} xl={7}>
       <FormControl className={classes.formControl}> 
                  
       <TextField id="standard-basic" label="Your full name " />
@@ -564,10 +424,7 @@ Clinic
       <Grid item>
 
 
-
-<Button variant="contained" style={{color:'white' ,backgroundColor:'#71C61D'}}>
-  FIX APPOINTMENT
-</Button>
+<AppButton/>
 
  
 </Grid>

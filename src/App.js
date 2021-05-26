@@ -1,13 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import PersistentDrawerLeft from './Components/Navbar'
+
 import Typography from '@material-ui/core/Typography';
-import Doctors from './Components/Doctors'
-import BookAppointment from './Components/BookAppointment'
-import Footer from './Components/Footer'
-import Suggestions from './Components/suggestions'
-import About from './Components/About'
 
 
 import {
@@ -351,7 +346,7 @@ function App() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap >
-          <Link to="/"> Hospital </Link>  
+          <Link to="/" style={{color: '#FFFFFF',textDecoration:'none',}}> Hospital </Link>  
           </Typography>
 
 
@@ -449,7 +444,7 @@ function App() {
 
   
         <List >
-        <Link to="/DrProfile" >
+        <Link to="/DrProfile" style={{color: 'black',textDecoration:'none',}}>
             <ListItem button >
               <ListItemIcon>  <AccountCircle/>  </ListItemIcon>
               <ListItemText> Dr.Profile </ListItemText>
@@ -460,7 +455,7 @@ function App() {
         </List>
 
         <List >
-        <Link to="/DrDashboard" >
+        <Link to="/DrDashboard" style={{color: 'black',textDecoration:'none',}}>
             <ListItem button >
               <ListItemIcon>  <AccountCircle/>  </ListItemIcon>
               <ListItemText> Dr.Dashboard </ListItemText>
@@ -469,7 +464,7 @@ function App() {
         </List>
 
         <List >
-        <Link to="/AdminDashboard" >
+        <Link to="/AdminDashboard" style={{color: 'black',textDecoration:'none',}}>
             <ListItem button >
               <ListItemIcon>  <AccountCircle/>  </ListItemIcon>
               <ListItemText> Admin Dashboard </ListItemText>
@@ -478,37 +473,7 @@ function App() {
         </List>
 
 
-      
-
-
-
-      
-{/*         
-        <List>
-          {['Dr. Profile', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}  href="/DrProfile">
-              <ListItemIcon>{index % 2 === 0 ? <Link to="/DrProfile" ><AccountCircle/></Link>   : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
-
-        
-
         <Divider />
-
-
-
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ?  <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-
-    
 
       </Drawer>
 

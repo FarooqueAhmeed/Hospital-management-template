@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:'20px',
     textAlign: 'center',
     color: '#71C61D', 
+    margin:40,
   },
 
 }));
@@ -30,13 +31,13 @@ export default function About() {
 <Container>  
 <div className={classes.root2}>
         
-        <Typography variant="h3" gutterBottom style={{}}>
+        <Typography variant="h4" gutterBottom style={{}}>
        ABOUT US
               </Typography>
                 
         </div>
 
-<Grid container spacing={6} justify="center">
+<Grid container spacing={6} justify="center" style={{margin:20}}>
     <Grid item xs={12} md={8}>
 
       <Typography variant="h6" gutterBottom>

@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:'20px',
     textAlign: 'center',
     color: '#71C61D', 
+    margin:40,
   },
 }));
 
@@ -46,8 +47,8 @@ export default function Suggestions() {
 <Container md={6} xs={6} lg={6}>  
 <div className={classes.root2}>
         
-<Typography variant="h3" gutterBottom style={{}}>
-BOOk YOUR APPOINTMENT NOW
+<Typography variant="h4" gutterBottom style={{}}>
+SUGGESTIONS
       </Typography>
         
 </div>

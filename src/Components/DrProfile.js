@@ -25,7 +25,7 @@ import Calenderlotti from '../Components/CalenderLoti'
 
 import Footer from '../Components/Footer'
 import Reviews from '../Components/Reviews'
-
+import Paper from '@material-ui/core/Paper';
 
 
 const labels = {
@@ -59,9 +59,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   large: {
-    width: theme.spacing(25),
-    height: theme.spacing(25),
+    width: theme.spacing(20),
+    height: theme.spacing(20),
+    
   },
+
 
   rootGrid: {
     flexGrow: 1,
@@ -100,6 +102,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
   },
+  paperroot: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    '& > *': {
+      margin: theme.spacing(1),
+      width: theme.spacing(16),
+      height: theme.spacing(16),
+    },
+  },
 
   
 }));
@@ -118,13 +129,18 @@ export default function DrProfile() {
   };
 
   return (
-    <Grid>
+    <Container>
 <CssBaseline />
 
-<Container maxWidth="lg">
+
+<div className={classes.root}>
+
+<Paper xs={12} md={12} lg={12} > 
+<Container xs={12} md={12} lg={12}>
     <div className={classes.root}>
-      <Avatar alt="Remy Sharp" src="/Images/abbat-uzkNxbPrN9E-unsplash.jpg" className={classes.large} />
-      
+
+      <Avatar variant='rounded' alt="Remy Sharp" src="/Images/abbat-uzkNxbPrN9E-unsplash.jpg" className={classes.large} />
+    
 
       <div className={classes.rootGrid}>
       <Grid container spacing={2}>
@@ -156,8 +172,8 @@ export default function DrProfile() {
   
     </div>
     </Container> 
-
-
+    </Paper>
+    </div>
 
 
     <div className={classes.rootMe}>
@@ -421,7 +437,7 @@ export default function DrProfile() {
 
 
     <Footer/>   
-  </Grid> 
+  </Container> 
 
 
 
