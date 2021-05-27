@@ -64,7 +64,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    //width: '100%',
+  
     backgroundColor: theme.palette.background.paper,
     margin: 25,
     paddingTop: 101,
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow:1,
     padding: theme.spacing(2),
     textAlign: "center",
-    //position: 'absolute',
+  
     color: theme.palette.text.secondary,
     "& > *": {
       margin: theme.spacing(4),
@@ -111,7 +111,7 @@ export default function AdminDashboard() {
             variant="scrollable"
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
-            ///inkBarStyle={{background: '#71C61D'}}
+          
             classes={{
               indicator: classes.indicator
             }}

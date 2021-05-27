@@ -2,17 +2,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
+
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Divider } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import ChatIcon from '@material-ui/icons/Chat';
-import VideoCallIcon from '@material-ui/icons/VideoCall';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
-import Rating from '@material-ui/lab/Rating';
-import Button from '@material-ui/core/Button';
 import Footer from '../Components/Footer'
 
 import PropTypes from 'prop-types';
@@ -26,7 +20,6 @@ import UpcommingApp from './UpcommingApp'
 import TodayApp from './TodayApp'
 import Reviews from './Reviews'
 import Paper from '@material-ui/core/Paper';
-import AppButton from './Button'
 import AppBar from '@material-ui/core/AppBar';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@material-ui/core/styles';
@@ -207,56 +200,6 @@ export default function DrDashboard() {
       
     </SwipeableViews>
     </div>
-
-
-
-
-
-{/* 
-<div className={classes.rootTab} xs>
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        className={classes.tabs}
-        
-      >
-        <Tab label=" My Patients" {...a11yProps(0)} />
-        <Tab label="Upcomming" {...a11yProps(1)} />
-        <Tab label="Today's" {...a11yProps(2)} />
-       
-        <Tab label=" Reviews" {...a11yProps(3)} />
-      
-        
-      </Tabs>
-      <TabPanel value={value} index={0}>
-      <AllAppointments/>
-      </TabPanel>
-
-
-
-      <TabPanel value={value} index={1}>
-
-      <UpcommingApp/>
-
-     
-     </TabPanel>
-      <TabPanel value={value} index={2}>
-     <TodayApp/>
-      </TabPanel>
-      
-      <TabPanel value={value} index={3}>
-      <Reviews/>
-    
-      
-      </TabPanel>
-      
-      
-    </div> */}
-
-
 
 
     <Footer/>   

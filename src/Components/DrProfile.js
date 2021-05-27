@@ -207,13 +207,6 @@ export default function DrProfile() {
 
 
 
-
-
-
-
-
-
-
     <div className={classes.rootMe}>
         
         <Typography variant="h4" gutterBottom style={{}}>
@@ -222,8 +215,7 @@ export default function DrProfile() {
                 
         </div>
        
-      
-      
+    
         
         <Grid container spacing={6} justify="left"  
         style={{

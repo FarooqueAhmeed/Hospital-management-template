@@ -4,14 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import CardG from './CardExample'
 import doctors from "../ClinicData"
-
-
-
-
-
 import Typography from '@material-ui/core/Typography';
-
-
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -116,13 +109,7 @@ export default function Cards() {
 
 
 )}      
-        {/* <Grid item xs={4}>
-          <Paper className={classes.paper}>item</Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>item</Paper>
-        </Grid> */}
-
+      
 
       </React.Fragment>
     );
