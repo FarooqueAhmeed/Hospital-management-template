@@ -7,11 +7,10 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import DashboardIcon from "@material-ui/icons/Dashboard";
 import Paper from "@material-ui/core/Paper";
 import GroupIcon from "@material-ui/icons/Group";
 import Button from "@material-ui/core/Button";
-import { Divider, Icon } from "@material-ui/core";
+import { Divider } from "@material-ui/core";
 import EventNoteIcon from "@material-ui/icons/EventNote";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import RateReviewIcon from "@material-ui/icons/RateReview";

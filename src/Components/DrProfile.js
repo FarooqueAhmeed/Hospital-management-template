@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
+
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Divider } from '@material-ui/core';

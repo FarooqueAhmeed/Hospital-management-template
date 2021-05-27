@@ -4,28 +4,13 @@ import Avatar from '@material-ui/core/Avatar';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+
 import { Divider } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import ChatIcon from '@material-ui/icons/Chat';
-import VideoCallIcon from '@material-ui/icons/VideoCall';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 
 import Rating from '@material-ui/lab/Rating';
-import Box from '@material-ui/core/Box';
 
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-
-import Calenderlotti from '../Components/CalenderLoti'
-
-import Footer from '../Components/Footer'
-
-
 
 
 

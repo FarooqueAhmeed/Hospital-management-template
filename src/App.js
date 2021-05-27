@@ -342,7 +342,7 @@ function App() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap >
-          <Link to="/" style={{color: '#FFFFFF',textDecoration:'none',}}> Hospital </Link>  
+          <Link to="/" style={{color: '#FFFFFF',textDecoration:'none',}}> Hospital Management </Link>  
           </Typography>
 
 

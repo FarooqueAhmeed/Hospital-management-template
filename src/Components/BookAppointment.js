@@ -8,8 +8,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
-import doctors from "../ClinicData"
+
 
 import Grid from '@material-ui/core/Grid';
 
@@ -18,9 +17,6 @@ import Radio from '@material-ui/core/Radio';
 
 
 
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormLabel from '@material-ui/core/FormLabel';
 import { Container } from '@material-ui/core';
 
 import AppButton from './Button'
@@ -42,32 +38,7 @@ const GreenRadio = withStyles({
 
 const useStyles = makeStyles ((theme) => ({
 
-    root2: {
-        '& > *': {
-          margin: theme.spacing(2),
-          width: '25ch',
-         
-          '& label.Mui-focused': {
-            color: 'green',
-          },
-          '& .MuiInput-underline:after': {
-            borderBottomColor: 'green',
-          },
-          '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-              borderColor: 'red',
-            },
-            '&:hover fieldset': {
-              borderColor: 'primary',
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: 'green',
-            },
-        }   
-        },
-        margin: theme.spacing(1),
-        minWidth: 120,
-      },
+  
 
 
   root: {
@@ -217,6 +188,7 @@ BOOk YOUR APPOINTMENT NOW
           onOpen={handleOpenAge}
           
           onChange={handleChangeAge}
+          value={age}
         >
            <MenuItem value="">
             <em>None</em>
