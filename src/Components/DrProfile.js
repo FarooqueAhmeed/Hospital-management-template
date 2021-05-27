@@ -120,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DrProfile() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(5);
+  const [value] = React.useState(5);
 
   const [valueRating, setValueRatting] = React.useState(2);
   const [hover, setHover] = React.useState(-1);

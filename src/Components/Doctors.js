@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Doctors() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(4);
+  const [value] = React.useState(4);
 
   return (
     <React.Fragment>
