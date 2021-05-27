@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
   paperroot: {
     display: "flex",
     flexWrap: "wrap",
+    flexGrow:1,
     padding: theme.spacing(2),
     textAlign: "center",
     //position: 'absolute',
@@ -82,6 +83,11 @@ const useStyles = makeStyles((theme) => ({
       width: theme.spacing(20),
       height: theme.spacing(18),
     },
+  },
+
+  indicator: {
+    backgroundColor: '#71C61D',
+    
   },
 }));
 
@@ -105,14 +111,19 @@ export default function AdminDashboard() {
             variant="scrollable"
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
+            ///inkBarStyle={{background: '#71C61D'}}
+            classes={{
+              indicator: classes.indicator
+            }}
+
           >
-            <Tab label="Dashboard" {...a11yProps(0)} />
-            <Tab label="Staffs" {...a11yProps(1)} />
-            <Tab label="Appointments " {...a11yProps(2)} />
-            <Tab label="Patients " {...a11yProps(3)} />
-            <Tab label="Tests " {...a11yProps(4)} />
-            <Tab label="Reviews" {...a11yProps(5)} />
-            <Tab label="Payments" {...a11yProps(6)} />
+            <Tab  style={{color: "#71C61D",}} label="Dashboard" {...a11yProps(0)} />
+            <Tab style={{color: "#71C61D",}} label="Staffs" {...a11yProps(1)} />
+            <Tab style={{color: "#71C61D",}}  label="Appointments " {...a11yProps(2)} />
+            <Tab style={{color: "#71C61D",}} label="Patients " {...a11yProps(3)} />
+            <Tab style={{color: "#71C61D",}} label="Tests " {...a11yProps(4)} />
+            <Tab style={{color: "#71C61D",}} label="Reviews" {...a11yProps(5)} />
+            <Tab style={{color: "#71C61D",}} label="Payments" {...a11yProps(6)} />
           </Tabs>
         </AppBar>
 
@@ -120,22 +131,20 @@ export default function AdminDashboard() {
           <h3> Welcome Admin </h3>
           <div className={classes.paperroot}>
             <Paper>
-              <GroupIcon color="primary" style={{ fontSize: 70 }} />
-              <h3 style={{ color: "#28a745" }}>Doctors 144</h3>
+              <GroupIcon style={{fill: "#71C61D",fontSize: 70}} />
+              <h3 style={{ color: "#71C61D" }}>Doctors 144</h3>
             </Paper>
 
             <Paper>
-              <GroupIcon color="primary" style={{ fontSize: 70 }} />
-              <h3 style={{ color: "#28a745" }}>Total Patient 344</h3>
+              <GroupIcon style={{fill: "#71C61D",fontSize: 70}} />
+              <h3 style={{ color: "#71C61D" }}>Total Patient 344</h3>
             </Paper>
 
             <Paper>
               {" "}
-              <EventNoteIcon color="primary" style={{ fontSize: 70 }} />
+              <EventNoteIcon style={{fill: "#71C61D",fontSize: 70}} />
               <h3
-                style={{
-                  color: "#28a745",
-                }}
+                style={{ color: "#71C61D" }}
               >
                 Today App 55{" "}
               </h3>
@@ -143,15 +152,10 @@ export default function AdminDashboard() {
 
             <Paper>
               <MonetizationOnIcon
-                color="primary"
-                style={{
-                  fontSize: 70,
-                }}
+               style={{fill: "#71C61D",fontSize: 70}}
               />
               <h3
-                style={{
-                  color: "#28a745",
-                }}
+                style={{ color: "#71C61D" }}
               >
                 Last month $5K{" "}
               </h3>
@@ -159,15 +163,10 @@ export default function AdminDashboard() {
 
             <Paper>
               <RateReviewIcon
-                color="primary"
-                style={{
-                  fontSize: 70,
-                }}
+                style={{fill: "#71C61D",fontSize: 70}}
               />
               <h3
-                style={{
-                  color: "#28a745",
-                }}
+              style={{ color: "#71C61D" }}
               >
                 Reviews 190{" "}
               </h3>

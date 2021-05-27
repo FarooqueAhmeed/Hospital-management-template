@@ -8,11 +8,11 @@ const PieChart = () => {
     <div>
       <Pie
         data={{
-          labels: ['Appointments $', 'Health testing $', 'Ambulances $', 'Pharmacy $', 'Online store $', 'Blood bank'],
+          labels: ['Appointments $', 'Health testing $', 'Ambulances $', 'Pharmacy $', 'Blood bank'],
           datasets: [
             {
               label: '$',
-              data: [5000,3500, 2500, 6000, 3000, 2000],
+              data: [5000,3500, 2500, 6000, 2000],
             
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

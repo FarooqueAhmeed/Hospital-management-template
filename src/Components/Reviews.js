@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:'20px',
     textAlign: 'center',
     color: '#71C61D', 
+    margin:40,
   },
 
 
@@ -106,7 +107,7 @@ export default function Reviews() {
 
             <div className={classes.rootMe}>
         
-        <Typography variant="h3" gutterBottom style={{}}>
+        <Typography variant="h4" gutterBottom style={{}}>
        Reviews
               </Typography>
                 
@@ -277,7 +278,7 @@ export default function Reviews() {
       <Divider />
 
       
-    <Typography justify="center"> 
+    <Typography align='center' style={{paddingTop:22,}}> 
 <Button variant="contained" style={{color:'white' ,backgroundColor:'#71C61D'}}>
   Load more reviews
 </Button> </Typography>

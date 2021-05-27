@@ -44,7 +44,7 @@ export default function Suggestions() {
 <> 
 
   
-<Container md={6} xs={6} lg={6}>  
+<Container>  
 <div className={classes.root2}>
         
 <Typography variant="h4" gutterBottom style={{}}>

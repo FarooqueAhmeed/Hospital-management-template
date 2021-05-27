@@ -56,6 +56,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     width: '100%',
   },
+  
+  indicator: {
+    backgroundColor: '#71C61D',
+    
+  },
 }));
 
 export default function Staff() {
@@ -77,21 +82,22 @@ export default function Staff() {
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          classes={{
+            indicator: classes.indicator
+          }}
           variant="scrollable"
           aria-label="full width tabs example"
           scrollButtons="auto"
         >
-          <Tab label="Doctors" {...a11yProps(0)} />
-          <Tab label="Nurses" {...a11yProps(1)} />
-          <Tab label="Laboratory" {...a11yProps(2)} />
-          <Tab label="Pharmacy" {...a11yProps(3)} />
+          <Tab style={{color: "#71C61D",}} label="Doctors" {...a11yProps(0)} />
+          <Tab style={{color: "#71C61D",}} label="Nurses" {...a11yProps(1)} />
+          <Tab style={{color: "#71C61D",}} label="Laboratory" {...a11yProps(2)} />
+          <Tab style={{color: "#71C61D",}} label="Pharmacy" {...a11yProps(3)} />
 
-          <Tab label="Recipients" {...a11yProps(4)} />
-          <Tab label="Accountants" {...a11yProps(5)} />
-          <Tab label="Security Guards " {...a11yProps(6)} />
-          <Tab label="Swipers" {...a11yProps(7)} />
+          <Tab style={{color: "#71C61D",}} label="Recipients" {...a11yProps(4)} />
+          <Tab style={{color: "#71C61D",}} label="Accountants" {...a11yProps(5)} />
+          <Tab style={{color: "#71C61D",}} label="Security Guards " {...a11yProps(6)} />
+          <Tab style={{color: "#71C61D",}} label="Swipers" {...a11yProps(7)} />
 
         </Tabs>
       </AppBar>

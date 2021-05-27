@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme) => ({
   root2: {
     paddingTop:'20px',
     textAlign: 'center',
-    color: '#71C61D', 
+    color: '#71C61D',
     margin:40,
+    
   },
 
 }));
@@ -37,7 +38,7 @@ export default function About() {
                 
         </div>
 
-<Grid container spacing={6} justify="center" style={{margin:20}}>
+<Grid container spacing={6} justify="center" >
     <Grid item xs={12} md={8}>
 
       <Typography variant="h6" gutterBottom>

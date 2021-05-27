@@ -26,7 +26,7 @@ import Calenderlotti from '../Components/CalenderLoti'
 import Footer from '../Components/Footer'
 import Reviews from '../Components/Reviews'
 import Paper from '@material-ui/core/Paper';
-
+import AppButton from './Button'
 
 const labels = {
   0.5: 'Useless',
@@ -52,10 +52,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     '& > *': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(3),
+      
     },
-
-    padding: 100,
+   
+   
   },
 
   large: {
@@ -67,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
 
   rootGrid: {
     flexGrow: 1,
-    paddingTop:33,
+    paddingTop:3,
    
   },
 
@@ -81,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:'20px',
     textAlign: 'center',
     color: '#71C61D', 
+    margin:40,
   },
 
 
@@ -98,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   rootRatting: {
-    width: 200,
+    width: 0,
     display: 'flex',
     alignItems: 'center',
   },
@@ -106,10 +108,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
+      margin: theme.spacing(0),
+      width: theme.spacing(0),
+      height: theme.spacing(0),
     },
+    
   },
 
   
@@ -130,56 +133,59 @@ export default function DrProfile() {
 
   return (
     <Container>
-<CssBaseline />
 
 
-<div className={classes.root}>
 
-<Paper xs={12} md={12} lg={12} > 
-<Container xs={12} md={12} lg={12}>
+<div style={{paddingTop:100,}}>  
+
+<Paper> 
+
     <div className={classes.root}>
 
-      <Avatar variant='rounded' alt="Remy Sharp" src="/Images/abbat-uzkNxbPrN9E-unsplash.jpg" className={classes.large} />
+      <Avatar srcSet variant='rounded' alt="Remy Sharp" src="/Images/abbat-uzkNxbPrN9E-unsplash.jpg" className={classes.large} />
     
 
-      <div className={classes.rootGrid}>
-      <Grid container spacing={2}>
+     
+      <Grid container spacing={3}>
         <Grid item xs>
+        
+            <Typography > <h2> Dr.Eric Buckles </h2> </Typography> 
+          <Divider/>
             <Typography > BDS, MDS - Oral & Maxillofacial Surger </Typography>
         <Divider/>
             <Typography > Speciality Dentist </Typography>
         <Divider/>
             <Rating name="read-only" value={value} readOnly /> (13)  
-        <Divider/>
-            <Typography > <h2> Dr.Eric Buckles </h2> </Typography> 
+      
         </Grid>
 
-        <Grid item xs>
-              <Typography> $100  per-hour </Typography>
+        <Grid item xs >
+              <Typography style={{ color:'#71C61D'}}> $100 phour </Typography>
           <Divider/>  
-              <Typography> <ChatIcon/>  <VideoCallIcon/>  <FavoriteIcon/> </Typography>
+              <Typography spacing={5}> <ChatIcon style={{fill: "#71C61D",fontSize: 40}}/>  <VideoCallIcon style={{fill: "#71C61D",fontSize: 40}}/>  <FavoriteIcon style={{fill: "#71C61D",fontSize: 40}}/> </Typography>
           <Divider/>  
 
           <Typography> 
-<Button variant="contained" style={{color:'white' ,backgroundColor:'#71C61D'}}>
-  FIX APPOINTMENT
-</Button> </Typography>
+<AppButton/>
+   </Typography>
           <Divider/> 
         
         </Grid>
         </Grid>
-        </div>
+       
   
     </div>
-    </Container> 
+  
     </Paper>
+
     </div>
+
 
 
     <div className={classes.rootMe}>
         
-        <Typography variant="h3" gutterBottom style={{}}>
-       ABOUT ME
+        <Typography variant="h4" gutterBottom style={{}}>
+       ABOUT
               </Typography>
                 
         </div>
@@ -210,7 +216,7 @@ export default function DrProfile() {
 
     <div className={classes.rootMe}>
         
-        <Typography variant="h3" gutterBottom style={{}}>
+        <Typography variant="h4" gutterBottom style={{}}>
         Timming
               </Typography>
                 
@@ -219,17 +225,13 @@ export default function DrProfile() {
       
       
         
-        <Grid container spacing={6} justify="left" 
-        
+        <Grid container spacing={6} justify="left"  
         style={{
-         
           paddingLeft:200,
         }}>
-
-
-      <Grid item xs={3} lg={4}>
+      <Grid item xs>
         
-            <div className={classes.rootTimming}>
+            
              
               <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary
@@ -348,15 +350,9 @@ export default function DrProfile() {
                 </AccordionDetails>
               </Accordion>
         
-        
-      </div>
-         
             </Grid>
 
-
-
-
-            <Grid item xs={3} lg={4}>
+            <Grid item xs>
 
         <Calenderlotti/>
              </Grid>
@@ -376,7 +372,7 @@ export default function DrProfile() {
 
     <div className={classes.rootMe}>
         
-        <Typography variant="h3" gutterBottom style={{}}>
+        <Typography variant="h4" gutterBottom style={{}}>
        Add a Review for ( Dr. Eric Buckles )
               </Typography>
                 

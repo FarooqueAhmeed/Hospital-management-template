@@ -25,58 +25,56 @@ import AllAppointments from './AllAppointments'
 import UpcommingApp from './UpcommingApp'
 import TodayApp from './TodayApp'
 import Reviews from './Reviews'
-
-
-
-
-
+import Paper from '@material-ui/core/Paper';
+import AppButton from './Button'
+import AppBar from '@material-ui/core/AppBar';
+import SwipeableViews from 'react-swipeable-views';
+import { useTheme } from '@material-ui/core/styles';
 
 function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-  
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`vertical-tabpanel-${index}`}
-        aria-labelledby={`vertical-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
-  
-  TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
   };
-  
-  function a11yProps(index) {
-    return {
-      id: `vertical-tab-${index}`,
-      'aria-controls': `vertical-tabpanel-${index}`,
-    };
-  }
-  
-
-
-
+}
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     '& > *': {
-      margin: theme.spacing(1),
+      margin: theme.spacing(3),
+      
     },
-
-    padding: 100,
+  },
+  rootTab: {
+    flexGrow: 1,
   },
 
   large: {
@@ -98,79 +96,124 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:33,
    
   },
-
-  rootTab: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-    display: 'flex',
-    //height: 224,
-    margin:70,
+  indicator: {
+    backgroundColor: '#71C61D',
     
   },
-  tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
-  },
- 
 
   
 }));
 
 export default function DrDashboard() {
   const classes = useStyles();
-
-
- 
+  const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
- 
 
-
- 
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
   return (
-    <Grid>
-<CssBaseline />
+    <Container>
 
-<Container maxWidth="lg">
+
+
+<div style={{paddingTop:100,}}>  
+
+<Paper> 
+
     <div className={classes.root}>
-      <Avatar alt="Remy Sharp" src="/Images/abbat-uzkNxbPrN9E-unsplash.jpg" className={classes.large} />
-      
 
-      <div className={classes.rootGrid}>
-      <Grid container spacing={2}>
+      <Avatar srcSet variant='rounded' alt="Remy Sharp" src="/Images/abbat-uzkNxbPrN9E-unsplash.jpg" className={classes.large} />
+    
+
+     
+      <Grid container spacing={3}>
         <Grid item xs>
-            <Typography > BDS, MDS - Oral & Maxillofacial Surger </Typography>
-        <Divider/>
-            <Typography > Speciality Dentist </Typography>
-        <Divider/>
-       
-            <Typography > <h2> Welcome ! Dr.Eric Buckles </h2> </Typography> 
-        </Grid>
-
-        <Grid item xs>
-              <Typography style={{ color:'#71C61D'}}> Over All Patients ( 13 ) </Typography>
-          <Divider/>  
-          <Typography style={{ color:'#71C61D'}}> Total Reviews( 13 ) </Typography>
-          <Divider/>
-            <Typography style={{ color:'#71C61D'}}> Upcomming Patients ( 7 ) </Typography>
-          <Divider/>
-
-          <Typography style={{ color:'#71C61D'}}> Today's Patients ( 5 ) </Typography>
-          <Divider/>
-             
-
         
+            <Typography > <h2> Welcome ! Dr.Eric Buckles </h2> </Typography> 
+          
+          <Typography style={{ color:'#71C61D'}}>Patients ( 13 ) </Typography>
+          <Divider/>  
+          <Typography style={{ color:'#71C61D'}}>Reviews( 13 ) </Typography>
+          <Divider/>
+            <Typography style={{ color:'#71C61D'}}>Upcomming ( 7 ) </Typography>
+          <Divider/>
+
+          <Typography style={{ color:'#71C61D'}}>Today ( 5 ) </Typography>
+    
         </Grid>
+
+     
         </Grid>
-        </div>
+       
   
     </div>
-    </Container> 
+  
+    </Paper>
+
+    </div>
+
 
 
 <div className={classes.rootTab}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="fullWidth"
+          aria-label="full width tabs example"
+          centered
+          classes={{
+            indicator: classes.indicator
+          }}
+        >
+
+        <Tab style={{color: "#71C61D",}} label=" My Patients" {...a11yProps(0)} />
+        <Tab style={{color: "#71C61D",}} label="Upcomming" {...a11yProps(1)} />
+        <Tab style={{color: "#71C61D",}} label="Today" {...a11yProps(2)} />
+        <Tab style={{color: "#71C61D",}} label=" Reviews" {...a11yProps(3)} />
+
+
+        </Tabs>
+      </AppBar>
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+         <TabPanel value={value} index={0}>
+      <AllAppointments/>
+      </TabPanel>
+
+
+
+      <TabPanel value={value} index={1}>
+         <UpcommingApp/>
+     </TabPanel>
+        
+      <TabPanel value={value} index={2}>
+           <TodayApp/>
+      </TabPanel>
+      
+      <TabPanel value={value} index={3}>
+         <Reviews/>
+      </TabPanel>
+      
+    </SwipeableViews>
+    </div>
+
+
+
+
+
+{/* 
+<div className={classes.rootTab} xs>
       <Tabs
         orientation="vertical"
         variant="scrollable"
@@ -178,6 +221,7 @@ export default function DrDashboard() {
         onChange={handleChange}
         aria-label="Vertical tabs example"
         className={classes.tabs}
+        
       >
         <Tab label=" My Patients" {...a11yProps(0)} />
         <Tab label="Upcomming" {...a11yProps(1)} />
@@ -198,7 +242,7 @@ export default function DrDashboard() {
       <UpcommingApp/>
 
      
-      </TabPanel>
+     </TabPanel>
       <TabPanel value={value} index={2}>
      <TodayApp/>
       </TabPanel>
@@ -210,13 +254,13 @@ export default function DrDashboard() {
       </TabPanel>
       
       
-    </div>
+    </div> */}
 
 
 
 
     <Footer/>   
-  </Grid> 
+  </Container> 
 
 
 
